@@ -106,16 +106,16 @@ public class BasePage {
 		}
 	}
 
-	public By getByXpath(String xpathLocator) {
+	private By getByXpath(String xpathLocator) {
 		return By.xpath(xpathLocator);
 	}
 
-	public WebElement getWebElement(WebDriver driver, String xpathLocator) {
-		return driver.findElement(By.xpath(xpathLocator));
+	private WebElement getWebElement(WebDriver driver, String xpathLocator) {
+		return driver.findElement(getByXpath(xpathLocator));
 	}
 
-	public List<WebElement> getListElement(WebDriver driver, String xpathLocator) {
-		return driver.findElements(By.xpath(xpathLocator));
+	private List<WebElement> getListElement(WebDriver driver, String xpathLocator) {
+		return driver.findElements(getByXpath(xpathLocator));
 	}
 
 	public void clickToElement(WebDriver driver, String xpathLocator) {
