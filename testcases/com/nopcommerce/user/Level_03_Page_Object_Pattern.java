@@ -2,8 +2,8 @@ package com.nopcommerce.user;
 
 import org.testng.annotations.Test;
 
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.user.HomePageObject;
+
 import org.testng.annotations.BeforeClass;
 
 import java.util.Random;

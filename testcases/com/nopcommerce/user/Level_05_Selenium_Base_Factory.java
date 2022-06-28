@@ -12,8 +12,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.LoginPageObject;
 
 public class Level_05_Selenium_Base_Factory extends BaseTest {
 	WebDriver driver;
@@ -81,6 +81,6 @@ public class Level_05_Selenium_Base_Factory extends BaseTest {
 		loginPage.inputToEmailAddress("quynh12345678@yopmail.com");
 		loginPage.inputToPassword("123456");
 		loginPage.clickToLoginBtn();
-		loginPage.isMyAccountLinkDisplayed();
+		homePage.isMyAccountLinkDisplayed();
 	}
 }

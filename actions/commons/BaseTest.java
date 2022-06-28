@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	String projectPath = System.getProperty("user.dir");
 
-	public WebDriver getBrowserName(String browserName) {
+	protected WebDriver getBrowserName(String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		switch (browserList) {
 		case FIREFOX:

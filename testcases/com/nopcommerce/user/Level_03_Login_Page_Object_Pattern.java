@@ -8,8 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.LoginPageObject;
 
 public class Level_03_Login_Page_Object_Pattern {
 	WebDriver driver;
@@ -77,6 +77,6 @@ public class Level_03_Login_Page_Object_Pattern {
 		loginPage.inputToEmailAddress("quynh12345678@yopmail.com");
 		loginPage.inputToPassword("123456");
 		loginPage.clickToLoginBtn();
-		loginPage.isMyAccountLinkDisplayed();
+		homePage.isMyAccountLinkDisplayed();
 	}
 }
