@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.user;
 
 public class FooterMenuPageUI {
 public static final String SITEMAP_LINK = "//a[text()='Sitemap']";

@@ -12,24 +12,20 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.LoginPageObject;
-import pageObjects.user.PageGeneratorManager;
+import commons.PageGeneratorManagerUser;
+import pageObjects.user.user.UserHomePageObject;
+import pageObjects.user.user.UserLoginPageObject;
 
 public class Level_06_Page_Generator_Manager extends BaseTest {
 	WebDriver driver;
-	LoginPageObject loginPage;
-	HomePageObject homePage;
+	UserLoginPageObject loginPage;
+	UserHomePageObject homePage;
 
 	@Parameters("browser")
-	// Nếu muốn dùng nhiều param thì khai báo dưới dạng mảng @Parameters({"browser",
-	// "server"})
 	@BeforeClass
 	public void beforeClass(String browerName) {
-		driver = getBrowserName(browerName);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://demo.nopcommerce.com/");
-		homePage = PageGeneratorManager.getHomePage(driver);
+		driver = getBrowserName(browerName, "https://demo.nopcommerce.com/");
+		homePage = PageGeneratorManagerUser.getUserHomePage(driver);
 	}
 
 	@Test
@@ -80,7 +76,7 @@ public class Level_06_Page_Generator_Manager extends BaseTest {
 		homePage = loginPage.clickToLoginBtn();
 		assertTrue(homePage.isMyAccountLinkDisplayed());
 	}
-	
+
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

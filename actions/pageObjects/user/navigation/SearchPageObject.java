@@ -1,4 +1,4 @@
-package pageObjects.navigation;
+package pageObjects.user.navigation;
 
 import org.openqa.selenium.WebDriver;
 

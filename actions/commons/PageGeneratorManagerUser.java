@@ -1,13 +1,14 @@
-package pageObjects.user;
+package commons;
 
 import org.openqa.selenium.WebDriver;
 
-import commons.BasePage;
-import pageObjects.myAccount.CustomerAddressesPageObject;
-import pageObjects.myAccount.CustomerInfoPageObject;
-import pageObjects.myAccount.SidebarMyAccountPageObject;
+import pageObjects.user.myaccount.CustomerAddressesPageObject;
+import pageObjects.user.myaccount.CustomerInfoPageObject;
+import pageObjects.user.myaccount.SidebarMyAccountPageObject;
+import pageObjects.user.user.UserHomePageObject;
+import pageObjects.user.user.UserLoginPageObject;
 
-public class PageGeneratorManager extends BasePage {
+public class PageGeneratorManagerUser extends BasePage {
 
 
 	// Su dung static method de truy nhap truc tiep o cac PageObject ko phai khoi tao object PageGeneratorManager)
@@ -16,12 +17,12 @@ public class PageGeneratorManager extends BasePage {
 		return new SidebarMyAccountPageObject(driver);
 	}
 
-	public static HomePageObject getHomePage(WebDriver driver) {
-		return new HomePageObject(driver);
+	public static UserHomePageObject getUserHomePage(WebDriver driver) {
+		return new UserHomePageObject(driver);
 	}
 
-	public static LoginPageObject getLoginPage(WebDriver driver) {
-		return new LoginPageObject(driver);
+	public static UserLoginPageObject getUserLoginPage(WebDriver driver) {
+		return new UserLoginPageObject(driver);
 	}
 
 	public static CustomerInfoPageObject getCustomerInfoPage(WebDriver driver) {

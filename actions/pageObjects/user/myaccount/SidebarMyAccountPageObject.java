@@ -1,10 +1,10 @@
-package pageObjects.myAccount;
+package pageObjects.user.myaccount;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageObjects.user.PageGeneratorManager;
-import pageUIs.SidebarMyAccountPageUI;
+import commons.PageGeneratorManagerUser;
+import pageUIs.user.SidebarMyAccountPageUI;
 
 public class SidebarMyAccountPageObject extends BasePage {
 	WebDriver driver;
@@ -16,14 +16,14 @@ public class SidebarMyAccountPageObject extends BasePage {
 		public CustomerInfoPageObject openCustomerInfoLink() {
 			waitForElementClickable(driver, SidebarMyAccountPageUI.CUSTOMER_INFO_LINK);
 			clickToElement(driver, SidebarMyAccountPageUI.CUSTOMER_INFO_LINK);
-			return PageGeneratorManager.getCustomerInfoPage(driver);
+			return PageGeneratorManagerUser.getCustomerInfoPage(driver);
 
 		}
 		
 		public CustomerAddressesPageObject openCustomerAddressesLink() {
 			waitForElementClickable(driver, SidebarMyAccountPageUI.CUSTOMER_ADDRESSES);
 			clickToElement(driver, SidebarMyAccountPageUI.CUSTOMER_ADDRESSES);
-			return PageGeneratorManager.getCustomerAddressesPage(driver);
+			return PageGeneratorManagerUser.getCustomerAddressesPage(driver);
 
 		}
 }

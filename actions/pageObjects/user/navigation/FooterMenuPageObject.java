@@ -1,9 +1,9 @@
-package pageObjects.navigation;
+package pageObjects.user.navigation;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.FooterMenuPageUI;
+import pageUIs.user.FooterMenuPageUI;
 
 public class FooterMenuPageObject extends BasePage {
 	WebDriver driver;

@@ -15,7 +15,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjects.navigation.FooterMenuPageObject;
+import pageObjects.admin.user.AdminLoginPageObject;
+import pageObjects.user.navigation.FooterMenuPageObject;
+import pageObjects.user.user.UserHomePageObject;
+import pageObjects.user.user.UserLoginPageObject;
+import pageUIs.admin.AdminHomePageUI;
+import pageUIs.user.UserHomePageUI;
 
 
 public class BasePage {
@@ -362,5 +367,27 @@ public class BasePage {
 	}
 	public FooterMenuPageObject getFooterMenuInstance(WebDriver driver) {
 		return new FooterMenuPageObject(driver);
+	}
+	
+	//Nếu project ko có switch role thì để logout link ở trang HomepageObject cũng đc
+	public AdminLoginPageObject clickAdminLogoutLink(WebDriver driver) {
+		waitForElementClickable(driver, AdminHomePageUI.LOGOUT_LINK);
+		clickToElement(driver, AdminHomePageUI.LOGOUT_LINK);
+		return PageGeneratorManagerAdmin.getAdminLoginPageObject(driver);
+	}
+	public UserHomePageObject clickUserLogoutLink(WebDriver driver) {
+		waitForElementClickable(driver, UserHomePageUI.LOGOUT_LINK);
+		clickToElement(driver, UserHomePageUI.LOGOUT_LINK);
+		return PageGeneratorManagerUser.getUserHomePage(driver);
+	}
+	
+	public UserHomePageObject openUserLoginPage (WebDriver driver, String urlValue) {
+		openPageUrl(driver,urlValue);
+		return PageGeneratorManagerUser.getUserHomePage(driver);
+	}
+	
+	public AdminLoginPageObject openAdminLoginPage (WebDriver driver, String urlValue) {
+		openPageUrl(driver,urlValue);
+		return PageGeneratorManagerAdmin.getAdminLoginPageObject(driver);
 	}
 }

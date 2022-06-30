@@ -9,17 +9,17 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.myAccount.CustomerAddressesPageObject;
-import pageObjects.myAccount.CustomerInfoPageObject;
-import pageObjects.myAccount.SidebarMyAccountPageObject;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.LoginPageObject;
-import pageObjects.user.PageGeneratorManager;
+import commons.PageGeneratorManagerUser;
+import pageObjects.user.myaccount.CustomerAddressesPageObject;
+import pageObjects.user.myaccount.CustomerInfoPageObject;
+import pageObjects.user.myaccount.SidebarMyAccountPageObject;
+import pageObjects.user.user.UserHomePageObject;
+import pageObjects.user.user.UserLoginPageObject;
 
 public class Level_07_SwitchPage extends BaseTest {
 	WebDriver driver;
-	LoginPageObject loginPage;
-	HomePageObject homePage;
+	UserLoginPageObject loginPage;
+	UserHomePageObject homePage;
 	SidebarMyAccountPageObject myAccountPage;
 	CustomerInfoPageObject customerInfoPage;
 	CustomerAddressesPageObject customerAddressPage;
@@ -27,10 +27,8 @@ public class Level_07_SwitchPage extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browerName) {
-		driver = getBrowserName(browerName);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://demo.nopcommerce.com/");
-		homePage = PageGeneratorManager.getHomePage(driver);
+		driver = getBrowserName(browerName, "https://demo.nopcommerce.com/");
+		homePage = PageGeneratorManagerUser.getUserHomePage(driver);
 	}
 
 	@Test
@@ -40,9 +38,10 @@ public class Level_07_SwitchPage extends BaseTest {
 		loginPage.inputToPassword("123456");
 		homePage = loginPage.clickToLoginBtn();
 		myAccountPage = homePage.clickMyAccountLink();
-		customerInfoPage= myAccountPage.openCustomerInfoLink();
-		customerAddressPage= myAccountPage.openCustomerAddressesLink();
+		customerInfoPage = myAccountPage.openCustomerInfoLink();
+		customerAddressPage = myAccountPage.openCustomerAddressesLink();
 	}
+
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

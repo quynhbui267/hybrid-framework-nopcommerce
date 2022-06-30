@@ -2,7 +2,7 @@ package com.nopcommerce.user;
 
 import org.testng.annotations.Test;
 
-import pageObjects.user.HomePageObject;
+import pageObjects.user.user.UserHomePageObject;
 
 import org.testng.annotations.BeforeClass;
 
