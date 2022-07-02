@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="NopCommerce">
-<parameter name="urlAdmin" value="https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F" />
-<parameter name="urlUser" value="https://demo.nopcommerce.com/" />
 
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_09_SwitchRole" />
+			<class name="com.jquery.Level_13_UploadFilesWithVarargs" />
 		</classes>
 	</test> <!-- Test -->
 

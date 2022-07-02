@@ -16,7 +16,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 
-public class User_01_Register_Level1 {
+public class Level1_User_01_Register {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	String emailAddress;
