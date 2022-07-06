@@ -6,6 +6,8 @@ public class GlobalConstants {
 	//System info
 	public static final String PROJECT_PATH= System.getProperty("user.dir");
 	public static final String OS_NAME= System.getProperty("os.name");
+	public static final String JAVA_VERSION = System.getProperty("java.version");
+	
 	
 	//App info_User
 	public static final String DEV_USER_URL= "https://demo.nopcommerce.com/";
@@ -28,14 +30,16 @@ public class GlobalConstants {
 	
 	//Dowwnload/Upload file
 	public static final String UPLOAD_PATH = PROJECT_PATH + File.separator+ "uploadFiles"+File.separator;
-	public static final String DOWNLOAD_PATH = PROJECT_PATH + "/downloadFiles/";
+	public static final String DOWNLOAD_PATH = PROJECT_PATH +  File.separator + "downloadFiles" +  File.separator;
 	
 	//Retry Case failed
 	public static final int RETRY_COUNT = 3;
 	
 	//Browser Logs/Extension
+	public static final String REPORTING_SCREENSHOT = PROJECT_PATH + File.separator + "reportNGImages" + File.separator;
 	
 	//HTML report folder
-	public static final String REPORTING_PATH = PROJECT_PATH + "/htmlReportNG";
-			
+	public static final String REPORTING_PATH = PROJECT_PATH + File.separator + "htmlReportNG" + File.separator;
+	public static final String ALLURE_REPORTING_PATH = PROJECT_PATH + File.separator + "allure-results";
+	
 }

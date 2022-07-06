@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="NopCommerce">
 
+	<listeners> 
+	<listener class-name = 'commons.MethodListener'/>
+	<listener class-name = 'reportConfig.AllureTestListener'/>
+	<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+	</listeners>
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.jquery.Level_13_UploadFilesWithVarargs" />
+			<class name="com.nopcommerce.user.Level_18_AllureReport" />
 		</classes>
 	</test> <!-- Test -->
 
 
 
 </suite> <!-- Suite -->
+

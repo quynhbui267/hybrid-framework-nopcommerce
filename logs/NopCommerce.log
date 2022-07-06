@@ -1,0 +1,96 @@
+[INFO ] [2022-07-04 14:37:20,769] Register - Step 1: Click Login link
+[INFO ] [2022-07-04 14:37:21,665] Register - Step 2: Input wrong email
+[INFO ] [2022-07-04 14:37:21,747] Register - Step 3: Click Login button
+[INFO ] [2022-07-04 14:37:22,104] Register - Step 3: Verify error message is displayed
+[2022-07-04 14:51:33,611] Register - Step 1: Click Login link
+[2022-07-04 14:51:35,132] Register - Step 2: Input wrong email
+[2022-07-04 14:51:35,192] Register - Step 3: Click Login button
+[2022-07-04 14:51:35,557] Register - Step 3: Verify error message is displayed
+[2022-07-04 14:51:35,646] -----------FAILED----------
+[2022-07-04 14:51:35,770] Expected result is Why but found Wrong email
+[2022-07-04 14:51:35,869] -----------PASSED----------
+[2022-07-04 14:51:35,956] -----------FAILED----------
+[2022-07-04 14:51:35,956] Expected result is Bi lam sao the nhi but found Wrong email
+[2022-07-04 14:52:51,630] Register - Step 1: Click Login link
+[2022-07-04 14:52:52,525] Register - Step 2: Input wrong email
+[2022-07-04 14:52:52,603] Register - Step 3: Click Login button
+[2022-07-04 14:52:52,997] Register - Step 3: Verify error message is displayed
+[2022-07-04 14:52:53,102] -----------FAILED----------
+[2022-07-04 14:52:53,102] Expected result is 'Why' but found 'Wrong email'
+[2022-07-04 14:52:53,187] -----------PASSED----------
+[2022-07-04 14:52:53,278] -----------FAILED----------
+[2022-07-04 14:52:53,279] Expected result is 'Bi lam sao the nhi' but found 'Wrong email'
+[2022-07-04 16:31:59,728] Register - Step 1: Click Login link
+[2022-07-04 16:32:00,628] Register - Step 2: Input wrong email
+[2022-07-04 16:32:00,707] Register - Step 3: Click Login button
+[2022-07-04 16:32:01,520] Register - Step 3: Verify error message is displayed
+[2022-07-04 16:32:01,599] -----------FAILED----------
+[2022-07-04 16:32:01,689] -----------PASSED----------
+[2022-07-04 16:32:01,763] -----------FAILED----------
+[2022-07-04 21:12:07,737] Register - Step 1: Click Login link
+[2022-07-04 21:12:10,677] Register - Step 2: Input wrong email
+[2022-07-04 21:12:10,739] Register - Step 3: Click Login button
+[2022-07-04 21:12:11,555] Register - Step 3: Verify error message is displayed
+[2022-07-04 21:12:11,659] -----------FAILED----------
+[2022-07-04 21:12:11,753] -----------PASSED----------
+[2022-07-04 21:12:11,833] -----------FAILED----------
+[2022-07-04 21:17:57,017] Register - Step 1: Click Login link
+[2022-07-04 21:17:57,926] Register - Step 2: Input wrong email
+[2022-07-04 21:17:58,011] Register - Step 3: Click Login button
+[2022-07-04 21:17:58,364] Register - Step 3: Verify error message is displayed
+[2022-07-04 21:17:58,461] -----------FAILED----------
+[2022-07-04 21:17:58,538] -----------PASSED----------
+[2022-07-04 21:17:58,614] -----------FAILED----------
+[2022-07-04 21:35:26,155] Register - Step 1: Click Login link
+[2022-07-04 21:35:27,184] Register - Step 2: Input wrong email
+[2022-07-04 21:35:27,282] Register - Step 3: Click Login button
+[2022-07-04 21:35:27,677] Register - Step 3: Verify error message is displayed
+[2022-07-04 21:35:27,783] -----------FAILED----------
+[2022-07-04 21:35:27,865] -----------PASSED----------
+[2022-07-04 21:35:27,971] -----------FAILED----------
+[2022-07-04 23:46:48,411] Register - Step 1: Click Login link
+[2022-07-04 23:46:49,688] Register - Step 2: Input wrong email
+[2022-07-04 23:46:49,877] Register - Step 3: Click Login button
+[2022-07-04 23:46:50,459] Register - Step 3: Verify error message is displayed
+[2022-07-04 23:46:50,564] -----------FAILED----------
+[2022-07-04 23:46:50,666] -----------PASSED----------
+[2022-07-04 23:46:50,771] -----------FAILED----------
+[2022-07-04 23:53:13,313] Register - Step 1: Click Login link
+[2022-07-04 23:53:15,372] Register - Step 2: Input wrong email
+[2022-07-04 23:53:15,444] Register - Step 3: Click Login button
+[2022-07-04 23:53:15,806] Register - Step 3: Verify error message is displayed
+[2022-07-04 23:53:15,915] -----------FAILED----------
+[2022-07-04 23:53:15,987] -----------PASSED----------
+[2022-07-04 23:53:16,061] -----------FAILED----------
+[2022-07-04 23:56:54,160] -----------FAILED----------
+[2022-07-04 23:56:54,244] -----------PASSED----------
+[2022-07-04 23:56:54,335] -----------FAILED----------
+[2022-07-04 23:59:58,546] -----------FAILED----------
+[2022-07-04 23:59:58,639] -----------PASSED----------
+[2022-07-04 23:59:58,712] -----------FAILED----------
+[2022-07-05 00:02:03,752] -----------FAILED----------
+[2022-07-05 00:02:03,859] -----------PASSED----------
+[2022-07-05 00:02:03,946] -----------FAILED----------
+[2022-07-05 17:50:18,725] -----------FAILED----------
+[2022-07-05 17:50:18,830] -----------PASSED----------
+[2022-07-05 17:50:18,906] -----------FAILED----------
+[2022-07-05 18:01:45,060] -----------FAILED----------
+[2022-07-05 18:01:45,133] -----------PASSED----------
+[2022-07-05 18:01:45,210] -----------FAILED----------
+[2022-07-05 18:14:16,422] -----------FAILED----------
+[2022-07-05 18:14:16,502] -----------PASSED----------
+[2022-07-05 18:14:16,582] -----------FAILED----------
+[2022-07-05 18:19:56,431] -----------FAILED----------
+[2022-07-05 18:19:56,517] -----------PASSED----------
+[2022-07-05 18:19:56,592] -----------FAILED----------
+[2022-07-05 18:41:32,103] -----------FAILED----------
+[2022-07-05 18:41:32,242] -----------PASSED----------
+[2022-07-05 18:41:32,435] -----------FAILED----------
+[2022-07-05 18:44:01,647] -----------FAILED----------
+[2022-07-05 18:44:01,719] -----------PASSED----------
+[2022-07-05 18:44:01,794] -----------FAILED----------
+[2022-07-05 19:01:59,530] -----------FAILED----------
+[2022-07-05 19:01:59,648] -----------PASSED----------
+[2022-07-05 19:01:59,751] -----------FAILED----------
+[2022-07-05 19:17:53,831] -----------PASSED----------
+[2022-07-05 19:19:57,170] -----------FAILED----------

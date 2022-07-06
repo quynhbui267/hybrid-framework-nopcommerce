@@ -4,6 +4,7 @@ import java.io.File;
 import java.nio.file.FileSystems;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -18,6 +19,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import pageObjects.admin.user.AdminLoginPageObject;
 import pageObjects.user.navigation.FooterMenuPageObject;
@@ -306,6 +308,25 @@ public class BasePage {
 		return getWebElement(driver, castRestParameter(locator, dynamicValues)).isDisplayed();
 	}
 
+	public void setImplicitWait(WebDriver driver, long timeOut) {
+		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+	}
+
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		boolean status = true;
+		setImplicitWait(driver, 5);
+		List<WebElement> element = getListElement(driver, locator);
+		setImplicitWait(driver, GlobalConstants.LONG_TIMEOUT);
+		if (element.size() == 0) {
+			status = true;
+		} else if (element.size() > 0 && !element.get(0).isDisplayed()) {
+			return true;
+		} else {
+			status = false;
+		}
+		return status;
+	}
+
 	public boolean isElementSelected(WebDriver driver, String locator) {
 		return getWebElement(driver, locator).isSelected();
 	}
@@ -453,7 +474,7 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locator)));
 	}
-	
+
 	public void waitForElementClickable(WebDriver driver, WebElement element) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(element));
@@ -474,12 +495,13 @@ public class BasePage {
 		System.out.println(fullFileName);
 		getWebElement(driver, "xpath=//input[@type='file']").sendKeys(fullFileName);
 	}
+
 	public static String getDirectorySlash(String folderName) {
-		//Cach 1
+		// Cach 1
 		String seperator = System.getProperty("file.seperator");
-		//Cach 2
+		// Cach 2
 		seperator = FileSystems.getDefault().getSeparator();
-		//Cach 3
+		// Cach 3
 		seperator = File.separator;
 		return seperator + folderName + seperator;
 	}

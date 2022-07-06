@@ -9,7 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
-import commons.PageGeneratorManagerJquery;
+import commons.PageGeneratorManagerOthers;
 import pageObjects.jquery.JQueryHomePageObject;
 
 
@@ -26,7 +26,7 @@ public class Level_12_DataTable extends BaseTest {
 
 	@Test
 	public void TC_1_DataTable() {
-		jQueryHomePage = PageGeneratorManagerJquery.getJqueryHomePage(driver);
+		jQueryHomePage = PageGeneratorManagerOthers.getJqueryHomePage(driver);
 		jQueryHomePage.inputToTextBoxByHeaderName("Country", "Angola");
 		jQueryHomePage.sleepInSecond(3);
 		

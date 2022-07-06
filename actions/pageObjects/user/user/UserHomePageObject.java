@@ -3,6 +3,7 @@ package pageObjects.user.user;
 import org.openqa.selenium.WebDriver;
 import commons.BasePage;
 import commons.PageGeneratorManagerUser;
+import io.qameta.allure.Step;
 import pageObjects.user.myaccount.SidebarMyAccountPageObject;
 import pageUIs.user.UserHomePageUI;
 
@@ -12,7 +13,7 @@ public class UserHomePageObject extends BasePage {
 	public UserHomePageObject(WebDriver driver) {
 		this.driver = driver;
 	}
-
+	@Step("Click to Login Link")
 	public UserLoginPageObject clickToLoginLink() {
 		waitForElementClickable(driver, UserHomePageUI.LOGIN_LINK);
 		clickToElement(driver, UserHomePageUI.LOGIN_LINK);

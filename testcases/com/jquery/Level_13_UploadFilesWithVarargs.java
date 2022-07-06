@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
-import commons.PageGeneratorManagerJquery;
+import commons.PageGeneratorManagerOthers;
 import pageObjects.jquery.JQueryHomePageObject;
 
 public class Level_13_UploadFilesWithVarargs extends BaseTest {
@@ -21,7 +21,7 @@ public class Level_13_UploadFilesWithVarargs extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browerName) {
 		driver = getBrowserName(browerName, GlobalConstants.JQUERY_UPLOAD_URL);
-		jQueryHomePage = PageGeneratorManagerJquery.getJqueryHomePage(driver);
+		jQueryHomePage = PageGeneratorManagerOthers.getJqueryHomePage(driver);
 	}
 
 	@Test
