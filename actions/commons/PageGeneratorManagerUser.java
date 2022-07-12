@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import pageObjects.user.myaccount.CustomerAddressesPageObject;
 import pageObjects.user.myaccount.CustomerInfoPageObject;
 import pageObjects.user.myaccount.SidebarMyAccountPageObject;
+import pageObjects.user.user.RegisterPageObject;
 import pageObjects.user.user.UserHomePageObject;
 import pageObjects.user.user.UserLoginPageObject;
 
@@ -31,5 +32,9 @@ public class PageGeneratorManagerUser extends BasePage {
 
 	public static CustomerAddressesPageObject getCustomerAddressesPage(WebDriver driver) {
 		return new CustomerAddressesPageObject(driver);
+	}
+	
+	public static RegisterPageObject getRegisterPage(WebDriver driver) {
+		return new RegisterPageObject(driver);
 	}
 }

@@ -9,9 +9,9 @@
 	</listeners>
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
+		<parameter name="url" value="https://www.saucedemo.com/" />
 		<classes>
-			<class name="com.nopcommerce.user.Common_01_Register_Cookie" />
-			<class name="com.nopcommerce.user.Level_19_ShareClass_Cookie" />
+			<class name="com.saucedemo.SortData" />
 		</classes>
 	</test> <!-- Test -->
 

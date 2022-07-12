@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -187,12 +188,12 @@ public class BasePage {
 
 	public void selectItemInDefaultDropdown(WebDriver driver, String locator, String textItem) {
 		Select select = new Select(getWebElement(driver, locator));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 	}
 
 	public void selectItemInDefaultDropdown(WebDriver driver, String locator, String textItem, String... dynamicValues) {
 		Select select = new Select(getWebElement(driver, castRestParameter(locator, dynamicValues)));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 	}
 
 	public String getFirstSelectedItemInDefaultDropdown(WebDriver driver, String locator) {
@@ -497,14 +498,27 @@ public class BasePage {
 	}
 
 	public static String getDirectorySlash(String folderName) {
-		// Cach 1
-		String seperator = System.getProperty("file.seperator");
-		// Cach 2
-		seperator = FileSystems.getDefault().getSeparator();
+		// // Cach 1
+		// String seperator = System.getProperty("file.seperator");
+		// // Cach 2
+		// seperator = FileSystems.getDefault().getSeparator();
 		// Cach 3
-		seperator = File.separator;
+		String seperator = File.separator;
 		return seperator + folderName + seperator;
 	}
+	
+	public Set<Cookie> getAllCookie(WebDriver driver) {
+		return driver.manage().getCookies();
+	}
+
+	public void addCookies(WebDriver driver, Set<Cookie> cookies) {
+		for (Cookie cookie : cookies) {
+			driver.manage().addCookie(cookie);
+			sleepInSecond(2);
+		}
+	}
+	
+	
 
 	public FooterMenuPageObject getFooterMenuInstance(WebDriver driver) {
 		return new FooterMenuPageObject(driver);
