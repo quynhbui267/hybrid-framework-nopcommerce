@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-
 public class HomPageObject extends BasePageFactory {
 	WebDriver driver;
 
@@ -22,12 +21,10 @@ public class HomPageObject extends BasePageFactory {
 	WebElement myAccountLink;
 
 	// Cách định nghĩa 1 Element (2)
-	@FindBy(how = How.XPATH, using="")
+	@FindBy(how = How.XPATH, using = "")
 	List<WebElement> footerLinks;
-	
+
 	public void clickToLoginLink() {
-		clickToElement(driver,myAccountLink);
+		clickToElement(driver, myAccountLink);
 	}
 }
-
-
